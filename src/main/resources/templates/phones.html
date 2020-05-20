@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+    <div class="container">
+        <h1>Все телефоны</h1>
+        <div th:each="data : ${phones}" class="alert alert-info mt-2">
+            <h3 th:text="${data.fio}"/>
+            <p th:text="${data.num}"/>
+            <a th:href="'/phone/' + ${data.id}" class="btn btn-warning">Детали</a>
+        </div>
+    </div>
+
+</body>
+</html>

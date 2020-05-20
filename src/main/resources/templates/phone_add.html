@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+    <div class="container">
+        <h1>Добавление</h1>
+        <form action="/phone/add" method="post">
+            <input type="text" name="fio" placeholder="ФИО владельца" class="form-control"><br>
+            <input type="text" name="num" placeholder="Номер телефона" class="form-control"><br>
+            <button type="submit" class="btn btn-success">Добавить</button>
+        </form>
+    </div>
+
+</body>
+</html>
